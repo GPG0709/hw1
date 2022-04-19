@@ -138,7 +138,7 @@ CREATE TABLE characters (
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
-/*
+
 INSERT INTO movies (
  title,
  year,
@@ -154,7 +154,7 @@ INSERT INTO studios (
  studio
 )
 VALUES
- ("Warner Bros");
+ ("Warner Bros.");
 
 INSERT INTO performances (
  actor,
@@ -195,16 +195,17 @@ VALUES
  ("Bane"),
  ("John Blake"),
  ("Selina Kyle");
-*/
+
 -- Prints a header for the movies output
 .print "Movies"
 .print "======"
 .print ""
-/*
+
+.width 22 5 5
 SELECT movies.title, movies.year, movies.rating, studios.studio
 FROM movies
 INNER JOIN studios ON movies.studio_id = studios.id;
-*/
+
 -- The SQL statement for the movies output
 -- TODO!
 
@@ -214,5 +215,10 @@ INNER JOIN studios ON movies.studio_id = studios.id;
 .print "========"
 .print ""
 
+.width 22 5 20 20
+SELECT movies.title, movies.year, performances.actor, characters.name
+FROM performances
+INNER JOIN movies ON performances.movie_id = movies.id
+INNER JOIN characters ON performances.character_id = characters.id;
 -- The SQL statement for the cast output
 -- TODO!
