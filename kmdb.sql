@@ -113,7 +113,7 @@ DROP TABLE IF EXISTS characters;
 CREATE TABLE movies (
  id INTEGER PRIMARY KEY AUTOINCREMENT,
  title TEXT,
- year INTEGER,
+ year TEXT,
  rating TEXT,
  studio_id INTEGER
  );
@@ -138,7 +138,7 @@ CREATE TABLE characters (
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
-
+/*
 INSERT INTO movies (
  title,
  year,
@@ -146,9 +146,9 @@ INSERT INTO movies (
  studio_id
 )
 VALUES
-    ("Batman Begins", 2005, "PG-13", 1),
-    ("The Dark Knight", 2008, "PG-13", 1),
-    ("The Dark Knight Rises", 2013, "PG-13", 1);
+    ("Batman Begins", "2005", "PG-13", 1),
+    ("The Dark Knight", "2008", "PG-13", 1),
+    ("The Dark Knight Rises", "2013", "PG-13", 1);
 
 INSERT INTO studios (
  studio
@@ -195,16 +195,16 @@ VALUES
  ("Bane"),
  ("John Blake"),
  ("Selina Kyle");
-
+*/
 -- Prints a header for the movies output
 .print "Movies"
 .print "======"
 .print ""
-
+/*
 SELECT movies.title, movies.year, movies.rating, studios.studio
 FROM movies
 INNER JOIN studios ON movies.studio_id = studios.id;
-
+*/
 -- The SQL statement for the movies output
 -- TODO!
 
